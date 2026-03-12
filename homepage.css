@@ -1,0 +1,360 @@
+/* =========================================
+GLOBAL STYLES
+========================================= */
+
+[class^="lx"] section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[class^="lx"] .container,
+[class^="lx"] .container-fluid {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+[class^="lx"] .row {
+    justify-content: center;
+    align-items: center;
+}
+
+[class^="lx"] section:not([class$="-banner"]) {
+    padding: 50px 0;
+}
+
+[class^="lx"] h1 {
+    font-size: 45px;
+    animation: fadeUp 1.3s ease-out forwards;
+    will-change: transform, opacity;
+}
+
+[class^="lx"] h2 {
+    font-size: 40px;
+    animation: fadeUp 1.3s ease-out forwards;
+    will-change: transform, opacity;
+}
+
+[class^="lx"] h3 {
+    font-size: 23px;
+}
+
+[class^="lx"] h4 {
+    font-size: 25px;
+}
+
+[class^="lx"] h5 {
+    font-size: 20px;
+}
+
+[class^="lx"] h6 {
+    font-size: 15px;
+}
+
+[class^="lx"] .btn {
+    font-size: 16px;
+    background-color: #199caa;
+    border: none;
+    border-radius: 17px;
+    padding: 7px 45px;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+[class^="lx"] .btn:hover {
+    background-color: #0f6771;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    [class^="lx"] h1 {
+        font-size: 35px;
+    }
+
+    [class^="lx"] h2 {
+        font-size: 30px;
+    }
+
+    [class^="lx"] h3 {
+        font-size: 23px;
+    }
+
+    [class^="lx"] h4 {
+        font-size: 20px;
+    }
+
+    [class^="lx"] h5 {
+        font-size: 20px;
+    }
+
+    [class^="lx"] h6 {
+        font-size: 15px;
+    }
+}
+
+[class$="-banner"] {
+    background: radial-gradient(circle at center center, #1eb1c2 0%, #157f8b 100%);
+    border-radius: 0 0 40px 40px;
+    width: 100%;
+    padding: 180px 0px 150px;
+}
+
+/* =========================================
+ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeEase {
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(50px); }
+    100% { transform: translateY(100px); }
+}
+
+@keyframes rotateImg {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* =========================================
+SECTION 1 – BANNER
+========================================= */
+
+.lx-homepage-banner {
+    background: linear-gradient(180deg, #072629 35%, #13747f 100%);
+    border-radius: 0 0 40px 40px;
+    padding: 100px 50px 0;
+    color: #fff;
+}
+
+.lx-homepage-banner-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.lx-homepage-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://lirunextrade.com/wp-content/uploads/2025/11/Banner-Elements-06-06-06-06-06.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: fadeEase 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+h1.lx-homepage-banner-title {
+    font-size: 65px;
+    width: 80%;
+    justify-self: center;
+}
+
+.lx-homepage-banner-image {
+    display: block;
+    margin: 40px auto 0;
+    max-width: 100%;
+}
+
+.lx-homepage-banner-content,
+.lx-homepage-banner-media {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+SECTION 2
+========================================= */
+
+.lx-homepage-services .custom-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: start;
+}
+
+.lx-homepage-services .lx-homepage-services-card {
+    border-radius: 20px;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+    padding-right: 40%;
+    min-height: 260px;
+}
+
+.lx-homepage-services .item-1,
+.lx-homepage-services .item-4 {
+    background: linear-gradient(180deg, #1999a6 30%, #147a86 100%);
+    color: white;
+}
+
+.lx-homepage-services .item-1 h3,
+.lx-homepage-services .item-4 h3 {
+    color: white;
+}
+
+.lx-homepage-services .item-2,
+.lx-homepage-services .item-3 {
+    background: #f3f4f8;
+    color: #000;
+}
+
+.lx-homepage-services .item-2 h3,
+.lx-homepage-services .item-3 h3 {
+    color: black;
+}
+
+.lx-homepage-services .lx-homepage-services-card a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.lx-homepage-services .item-2 a,
+.lx-homepage-services .item-3 a {
+    color: #1999a6;
+}
+
+.lx-homepage-services .lx-homepage-services-card img {
+    position: absolute;
+    max-width: 42%;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+}
+
+.lx-homepage-services .item-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+SECTION 3
+========================================= */
+
+.lx-homepage-highlight img {
+    animation: rotateImg 20s linear infinite;
+    max-width: 100%;
+}
+
+.lx-homepage-highlight .container {
+    max-width: 1200px;
+}
+
+/* =========================================
+SECTION 4
+========================================= */
+
+.lx-homepage-why {
+    background: radial-gradient(circle at left center, #072629 35%, #147681 100%);
+    color: #fff;
+}
+
+.lx-homepage-why-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+SECTION 5
+========================================= */
+
+.lx-homepage-app-inner.container {
+    background: #f3f4f8;
+    border-radius: 40px;
+    padding: 40px 60px;
+}
+
+img.lx-homepage-app-image {
+    margin-right: -63px;
+    margin-bottom: -40px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+/* for iPad Mini & iPad Air */
+@media (min-width: 450px) and (max-width: 821px) {
+    .lx-homepage-highlight {
+        position: relative;
+        padding: 80px 0;
+        overflow: hidden;
+    }
+
+    .lx-homepage-highlight::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("https://lirunextrade.com/wp-content/uploads/2025/11/ChatGPT-Image-Nov-19-2025-02_49_47-PM-800x800.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: 1;
+    }
+
+    .lx-homepage-highlight .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .lx-homepage-why-image {
+        width: 50%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+    .lx-homepage-banner {
+        padding: 80px 20px 0;
+    }
+
+    h1.lx-homepage-banner-title {
+        font-size: 35px;
+        width: 100%;
+    }
+
+    .lx-homepage-services .custom-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+
+    .lx-homepage-services .lx-homepage-services-card {
+        padding-top: 10px;
+        min-height: 220px;
+    }
+
+    .lx-homepage-app-inner.container {
+        width: 80%;
+        padding: 40px 20px;
+    }
+
+    img.lx-homepage-app-image {
+        margin-top: 10px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .lx-homepage-why .lx-homepage-why-image {
+        width: 200px;
+    }
+}
